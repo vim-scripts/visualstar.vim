@@ -1,6 +1,6 @@
 *visualstar.txt*	|star| for |Visual-mode|.
 
-Version: 0.2.0
+Version: 0.2.1
 Author : thinca <thinca+vim@gmail.com>
 License: Creative Commons Attribution 2.1 Japan License
          <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
@@ -11,6 +11,7 @@ CONTENTS					*visualstar-contents*
 INTRODUCTION			|visualstar-introduction|
 INTERFACE			|visualstar-interface|
   KEY MAPPINGS			  |visualstar-key-mappings|
+EXAMPLES			|visualstar-examples|
 CHANGELOG			|visualstar-changelog|
 
 
@@ -89,6 +90,11 @@ If you map N to something, you must create and use a secondary key mapping. >
 
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
+
+0.2.1	2010-04-23
+	- Don't append \< and \> if the edge of string is multibyte character.
+	- Append \< and \> if it is differed inside or outside of the boundary
+	  that is multibyte character or not.
 
 0.2.0	2010-01-25
 	- Changed the key mapping name.
