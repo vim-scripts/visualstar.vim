@@ -1,9 +1,8 @@
 *visualstar.txt*	|star| for |Visual-mode|.
 
-Version: 0.2.1
+Version: 0.3.0
 Author : thinca <thinca+vim@gmail.com>
-License: Creative Commons Attribution 2.1 Japan License
-         <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
+License: zlib License
 
 ==============================================================================
 CONTENTS					*visualstar-contents*
@@ -15,11 +14,18 @@ EXAMPLES			|visualstar-examples|
 CHANGELOG			|visualstar-changelog|
 
 
+
 ==============================================================================
 INTRODUCTION					*visualstar-introduction*
 
 *visualstar* is a Vim plugin to provide a |star| feature for |Visual-mode|.
 In other words, you can search your selection text in |Visual-mode|.
+
+Requirements:
+- Vim 7.2 or later
+
+Latest version:
+https://github.com/thinca/vim-visualstar
 
 
 
@@ -68,8 +74,10 @@ The following key mappings will be also available in |Visual-mode| unless
 {lhs}		{rhs}
 --------	---------------------
 *		<Plug>(visualstar-*)
+<kMultiply>	<Plug>(visualstar-*)
 #		<Plug>(visualstar-#)
 g*		<Plug>(visualstar-g*)
+g<kMultiply>	<Plug>(visualstar-g*)
 g#		<Plug>(visualstar-g#)
 
 
@@ -90,6 +98,9 @@ If you map N to something, you must create and use a secondary key mapping. >
 
 ==============================================================================
 CHANGELOG					*visualstar-changelog*
+
+0.3.0	2012-05-12
+	- Added key mappings from <kMultiply>.
 
 0.2.1	2010-04-23
 	- Don't append \< and \> if the edge of string is multibyte character.

@@ -1,8 +1,7 @@
 " |star| for |Visual-mode|.
-" Version: 0.2.1
+" Version: 0.3.0
 " Author : thinca <thinca+vim@gmail.com>
-" License: Creative Commons Attribution 2.1 Japan License
-"          <http://creativecommons.org/licenses/by/2.1/jp/deed.en>
+" License: zlib License
 
 if exists('g:loaded_visualstar')
   finish
@@ -80,8 +79,10 @@ nnoremap <expr> <SID>(count) <SID>count()
 if !exists('g:visualstar_no_default_key_mappings') ||
 \   !g:visualstar_no_default_key_mappings
   silent! vmap <unique> * <Plug>(visualstar-*)
+  silent! vmap <unique> <kMultiply> <Plug>(visualstar-*)
   silent! vmap <unique> # <Plug>(visualstar-#)
   silent! vmap <unique> g* <Plug>(visualstar-g*)
+  silent! vmap <unique> g<kMultiply> <Plug>(visualstar-g*)
   silent! vmap <unique> g# <Plug>(visualstar-g#)
 endif
 
