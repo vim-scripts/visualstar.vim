@@ -1,5 +1,5 @@
 " |star| for |Visual-mode|.
-" Version: 0.3.0
+" Version: 0.4.0
 " Author : thinca <thinca+vim@gmail.com>
 " License: zlib License
 
@@ -78,12 +78,14 @@ nnoremap <expr> <SID>(count) <SID>count()
 
 if !exists('g:visualstar_no_default_key_mappings') ||
 \   !g:visualstar_no_default_key_mappings
-  silent! vmap <unique> * <Plug>(visualstar-*)
-  silent! vmap <unique> <kMultiply> <Plug>(visualstar-*)
-  silent! vmap <unique> # <Plug>(visualstar-#)
-  silent! vmap <unique> g* <Plug>(visualstar-g*)
-  silent! vmap <unique> g<kMultiply> <Plug>(visualstar-g*)
-  silent! vmap <unique> g# <Plug>(visualstar-g#)
+  silent! xmap <unique> * <Plug>(visualstar-*)
+  silent! xmap <unique> <kMultiply> <Plug>(visualstar-*)
+  silent! vmap <unique> <S-LeftMouse> <Plug>(visualstar-*)
+  silent! xmap <unique> # <Plug>(visualstar-#)
+  silent! xmap <unique> g* <Plug>(visualstar-g*)
+  silent! xmap <unique> g<kMultiply> <Plug>(visualstar-g*)
+  silent! vmap <unique> g<S-LeftMouse> <Plug>(visualstar-g*)
+  silent! xmap <unique> g# <Plug>(visualstar-g#)
 endif
 
 
